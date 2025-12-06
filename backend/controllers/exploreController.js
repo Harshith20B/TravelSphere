@@ -8,11 +8,12 @@ const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY);
 
 const getLandmarksFromGemini = async (location, radius) => {
   try {
+    // UPDATED: Using Gemini 2.5 Flash with higher output token capacity
     const model = genAI.getGenerativeModel({ 
-      model: "gemini-1.5-flash",
+      model: "gemini-2.5-flash",
       generationConfig: {
         temperature: 0.3,
-        maxOutputTokens: 4000,
+        maxOutputTokens: 8192, // Increased for 2.5 Flash capabilities
         topP: 0.8,
       }
     });
