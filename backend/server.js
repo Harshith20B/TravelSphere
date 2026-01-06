@@ -2,7 +2,7 @@
  * Express server for TravelSphere backend
  * Clean CORS config to allow all origins dynamically with credentials
  */
-
+ //travelo\Scripts\activate
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
